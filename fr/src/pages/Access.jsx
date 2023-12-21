@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+// import { useHistory } from 'react-router-dom'
 import './Access.css'
 
 function Acccess() {
@@ -6,6 +7,47 @@ function Acccess() {
         document.title = "Log In | Robinhood";
 
     }, [])
+
+    const [email, setEmail] = useState('')
+    const [pass, setPass] = useState('')
+
+    const handleInput = (e) => {
+        if (e.target.id === 'email') {
+            setEmail(e.target.value)
+        } else {
+            setPass(e.target.value)
+        }
+    }
+
+    const shoot = () => {
+        email == '' ? document.getElementById('email').style.border = "1px solid red" : document.getElementById('email').style.border = "1px solid lightgray"
+        pass == '' ? document.getElementById('password').style.border = "1px solid red" : document.getElementById('password').style.border = "1px solid lightgray"
+
+        
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if (email != '' && pass != '') {
+            fetch(`http://localhost:3000/login?email=` + email + "&password=" + pass, {
+                method: 'GET',
+                cache: 'no-cache',
+                cors: 'no-cors'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data[0].email === email && data[0].password === pass) {
+                        console.log("Success!")
+                    } else {
+                        shoot()
+                    }
+                })
+                .catch(err => console.log(err))
+        } else {
+            shoot()
+        }
+    }
 
     return (
         <div id='access'>
@@ -17,14 +59,14 @@ function Acccess() {
             <div className='right'>
                 <div className='access-container'>
                     <h2>Log in to Robinhood</h2>
-                    <form id='signin'>
+                    <form id='signin' onSubmit={handleSubmit}>
                         <div className='form-group'>
-                            <label htmlFor='username'>Email</label>
-                            <input type='text' id='username' />
+                            <label htmlFor='email'>Email</label>
+                            <input type='text' id='email' onChange={handleInput} value={email} />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='password'>Password</label>
-                            <input type='password' id='password' />
+                            <input type='password' id='password' onChange={handleInput} value={pass} />
                         </div>
                         <div className='form-group'>
                             <input type='checkbox' id='remember' />
