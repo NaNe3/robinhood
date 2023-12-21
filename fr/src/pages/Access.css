@@ -22,7 +22,7 @@ img {
 }
 
 .right h2 {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 600;
 }
 
@@ -43,8 +43,50 @@ label {
 
 input[type="text"], input[type="password"] {
     width: 100%;
-    height: 30px;
+    height: 35px;
     background-color: white;
     border-radius: 4px;
     border: 1px solid lightgray;
+    outline: none;
+    color: black;
+    transition: 0.5s;
+    padding: 10px 15px;
 }
+
+input[type="text"]:hover, input[type="password"]:hover {
+    border: 1px solid gray;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid black;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 1px solid lightgray;
+    margin-right: 13px;
+}
+
+.line-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #6a7278;
+  }
+  
+  .line-text::before,
+  .line-text::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .line-text::before {
+    margin-right: .5em;
+  }
+  
+  .line-text::after {
+    margin-left: .5em;
+  }
