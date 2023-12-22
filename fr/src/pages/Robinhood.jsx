@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import './Robinhood.css'
 
-import Home from './components/Home'
+import Home from './modules/Home'
 
 function Robinhood() {
     return (

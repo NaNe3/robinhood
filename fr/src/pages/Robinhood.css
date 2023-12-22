@@ -69,3 +69,46 @@
 #nav-bar a:hover {
     color: #00c805;
 }
+
+.stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 6px 24px;
+    background-color: white;
+    border-bottom: 1px solid #e3e9ed;
+    cursor: pointer;
+}
+
+.stock:hover {
+    background-color: #F5F8FA;
+}
+
+.stock-title h3 {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+.stock-title p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+.stock-graph {
+    width: 20px;
+    padding-top: 10px;
+}
+
+.stock-price p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.bull { color: #7eca07; }
+.bear { color: #ff5000; }

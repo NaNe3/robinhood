@@ -42,6 +42,8 @@ function SignUp({ setSignIn, setAuth }) {
                 .then(res => res.json())
                 .then(data => {
                     if (data._id) {
+                        sessionStorage.setItem('id', data._id)
+                        sessionStorage.setItem('stocks', JSON.stringify([]))
                         setAuth(true)
                     } else {
                         alert("Error!")

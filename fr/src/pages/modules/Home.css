@@ -2,7 +2,7 @@
     position: relative;
     display: block;
     margin: 35px auto;
-    width: 1400px;
+    width: 1390px;
     height: 1000000px;
 }
 
@@ -10,7 +10,8 @@
     display: inline-block;
     width: 1050px;
     height: 400px;
-    background-color: red;
+    margin: 0;
+    padding: 0;
 }
 
 .sidebar {
@@ -19,8 +20,28 @@
 
     width: 335px;
     float: right;
-    height: 300px;
+    height: 580px;
+    overflow-y: auto;
     background-color: white;
     border: 1px solid #e3e9ed;
     border-radius: 4px;
+}
+
+.sidebar-container {
+    width: 100%;
+}
+
+
+
+.sidebar-header {
+    padding: 14px 20px;
+    color: black;
+    border-bottom: 1px solid #e3e9ed;
+}
+
+.sidebar-header h2 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
 }

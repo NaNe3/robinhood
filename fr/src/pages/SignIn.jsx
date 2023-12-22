@@ -36,6 +36,8 @@ function SignUp({ setSignIn, setAuth }) {
                 .then(res => res.json())
                 .then(data => {
                     if (data[0].email === email && data[0].password === pass) {
+                        sessionStorage.setItem('id', data[0].id)
+                        sessionStorage.setItem('stocks', JSON.stringify(data[0].stocks))
                         setAuth(true)
                     } else {
                         shoot()
