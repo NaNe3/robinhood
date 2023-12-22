@@ -7,7 +7,6 @@ const port = 3000
 app.use(Cors())
 
 const url =  "mongodb+srv://admin:admin@godfather.gpqepzo.mongodb.net/?retryWrites=true&w=majority"
-
 Mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.log(err))
@@ -25,6 +24,27 @@ app.get("/login", (req, res) => {
 
     user.find({email: email, password: password})
         .then(data => res.json(data))
+        .catch(err => res.json(err))
+})
+
+app.post("/signup", (req, res) => {
+    const {name, email, password} = req.query
+
+    const newUser = new user({
+        name: name,
+        email: email,
+        password: password,
+        stocks: []
+    })
+
+    newUser.save()
+        .then(data => {
+            if (data._id) {
+                res.json(data)
+            } else {
+                res.status(500).json({ error: "Error creating user" })
+            }
+        })
         .catch(err => res.json(err))
 })
 

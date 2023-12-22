@@ -7,7 +7,7 @@ import Access from './pages/Access'
 function App() {
   const [auth, setAuth] = useState(false)
   return (
-    auth ? "AUTHENITCATED" : <Access />
+    auth ? "AUTHENITCATED" : <Access setAuth={setAuth} />
   )
 }
 
