@@ -3,11 +3,12 @@ import './App.css'
 
 //PAGE COMPONENTS
 import Access from './pages/Access'
+import Landing from './pages/Landing'
 
 function App() {
   const [auth, setAuth] = useState(false)
   return (
-    auth ? "AUTHENITCATED" : <Access setAuth={setAuth} />
+    auth ? <Landing /> : <Access setAuth={setAuth} />
   )
 }
 
