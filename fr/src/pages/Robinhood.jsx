@@ -2,7 +2,7 @@ import React from 'react'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import './Robinhood.css'
 
-import Home from './modules/Home'
+import Investing from './modules/Investing'
 
 function Robinhood() {
     return (
@@ -26,7 +26,7 @@ function Robinhood() {
                 </div>
 
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/' element={<Investing />} />
                     {/* <Route path='/stocks' element={<Stocks />} /> */}
                     {/* <Route path='/earnings' element={<Earnings />} /> */}
                 </Routes>

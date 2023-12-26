@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../modules/Home.css'
+import '../modules/Investing.css'
 import '../Robinhood.css'
 
 function Stock({ ticker }) {

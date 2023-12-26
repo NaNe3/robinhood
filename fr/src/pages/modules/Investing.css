@@ -1,17 +1,16 @@
 .content-container {
     position: relative;
     display: block;
-    margin: 35px auto;
+    margin: 35px 0px;
     width: 1390px;
     height: 1000000px;
 }
 
 .main {
     display: inline-block;
-    width: 1050px;
-    height: 400px;
-    margin: 0;
-    padding: 0;
+    width: 1030px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .sidebar {
@@ -45,3 +44,32 @@
     padding: 0;
     font-weight: 800;
 }
+
+.info-container {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.info-container:hover {
+    background-color: #F5F8FA;
+    width: 100%;
+}
+
+.buying-power {
+    width: auto;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e3e9ed;
+    border-bottom: 1px solid #e3e9ed;
+}
+
+.buying-power p {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+

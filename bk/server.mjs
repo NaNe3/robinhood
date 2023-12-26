@@ -15,7 +15,9 @@ const Schema = Mongoose.Schema({
     name: String,
     email: String,
     password: String,
-    stocks: Array
+    crypto: Array,
+    stocks: Array,
+    lists: Array
 })
 const user = Mongoose.model("user", Schema)
 
@@ -34,7 +36,9 @@ app.post("/signup", (req, res) => {
         name: name,
         email: email,
         password: password,
-        stocks: []
+        crypto: [],
+        stocks: [],
+        lists: []
     })
 
     newUser.save()
