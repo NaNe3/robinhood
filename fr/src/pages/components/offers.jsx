@@ -8,34 +8,34 @@ const offers = [
         link: 'Enable options trading'
     },
     {
-        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_options_upsell/green/2x.png',
-        header: 'NUMBER 2 LOLNUMBER 2 LOLZZ',
-        text: 'Bullish? Bearish? Options may fit your investment strategy, no matter your market outlook.',
-        link: 'Enable options trading'
+        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_sweep_interest_current/green/2x.png',
+        header: 'Dont miss out',
+        text: 'Its not too late: earn 5% interest on your uninvested cash with Robinhood Gold ($5/mo). Terms apply.',
+        link: 'Try Gold'
     },
     {
-        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_options_upsell/green/2x.png',
-        header: 'I AM ON thREEEE',
-        text: 'Bullish? Bearish? Options may fit your investment strategy, no matter your market outlook.',
-        link: 'Enable options trading'
+        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_slip_enrollment/green/2x.png',
+        header: 'Stock lending',
+        text: 'Youre currently not taking advantage of an extra income opportunity. You could change that today. (Terms apply)',
+        link: 'Get started'
     },
     {
-        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_options_upsell/green/2x.png',
-        header: 'Based on your interests',
-        text: 'Bullish? Bearish? Options may fit your investment strategy, no matter your market outlook.',
-        link: 'Enable options trading'
+        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_permanent_glowup/green/2x.png',
+        header: 'Robinhood retirement',
+        text: 'Give your cash a boost with a Robinhood IRA. Youll get 1% added when you transfer funds. Terms apply.',
+        link: 'Boost your retirement'
     },
     {
-        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_options_upsell/green/2x.png',
-        header: 'Based on your interests',
-        text: 'Bullish? Bearish? Options may fit your investment strategy, no matter your market outlook.',
-        link: 'Enable options trading'
+        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_acat_in_launch/green/2x.png',
+        header: 'Transfer into Robinhood',
+        text: 'Its now easier than ever to bring your outside brokerage accounts into Robinhood.',
+        link: 'learn more'
     },
     {
-        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_options_upsell/green/2x.png',
-        header: 'Based on your interests',
-        text: 'Bullish? Bearish? Options may fit your investment strategy, no matter your market outlook.',
-        link: 'Enable options trading'
+        image: 'https://cdn.robinhood.com/card_side_image_asset_v2/ios_advanced_indicator_alerts/green/2x.png',
+        header: 'New feature',
+        text: 'Set custom alerts for technical indicators like MA, RSI, and more.',
+        link: 'Get started'
     }
 ]
 
@@ -85,7 +85,7 @@ function Offers() {
         <div style={{overflow: "hidden"}}>
             <div className='offers-container' style={{ marginLeft: offset }}>
                 {offers.map((offer) => {
-                    return <Offer image={offer.image} header={offer.header} text={offer.link} link={offer.link} />
+                    return <Offer image={offer.image} header={offer.header} text={offer.text} link={offer.link} />
                 })}
             </div>
 
