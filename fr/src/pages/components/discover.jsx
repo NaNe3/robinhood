@@ -59,7 +59,9 @@ function Discover() {
     return (
         <div style={{overflow: "hidden", width: "1040px"}}>
             <div className='discover-container'>
-                <h2 className='section-title'>Discover more</h2>
+                <div className='section-title'>
+                    <h2>Discover more</h2>
+                </div>
                 {items.map((item) => {
                     return <Item image={item.image} header={item.header} text={item.text}/>
                 })}

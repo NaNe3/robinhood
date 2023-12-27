@@ -5,6 +5,7 @@ import Sidebar from '../components/sidebar'
 import Graph from '../components/graph'
 import Offers from '../components/offers'
 import Discover from '../components/discover'
+import Trending from '../components/trending'
 
 function Investing() {
     useEffect(() => {
@@ -31,6 +32,7 @@ function Investing() {
 
                 <Offers />
                 <Discover />
+                <Trending />
             </div>
 
             <Sidebar stocks={stocks} crypto={crypto} lists={lists} />
