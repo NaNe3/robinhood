@@ -110,5 +110,77 @@
     text-align: right;
 }
 
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 6px 24px 6px 14px;
+    cursor: pointer;
+}
+
+.list-header:hover {
+    background-color: #F5F8FA;
+
+}
+
+.list-identifier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.list-identifier:hover {
+    background-color: #f0f0f0;
+
+}
+
+.list-identifier h3 {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0px 15px;
+    padding: 0;
+
+}
+
+.list-icon {
+    background-color: #F5F8FA;
+    border-radius: 4px;
+    padding: 2px 7px;
+}
+
+.list-icon p {
+    margin: 0;
+    padding: 8px 0;
+}
+
+.list-tickers .stock {
+    border: 0;
+}
+
+.list-tickers .stock:last-child {
+    border-bottom: 1px solid #e3e9ed;
+
+}
+
+
+.list-options:hover {
+    color: #ff5000;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
+}
+
+@keyframes rotate-back {
+    0% { transform: rotate(180deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .bull { color: #7eca07; }
 .bear { color: #ff5000; }

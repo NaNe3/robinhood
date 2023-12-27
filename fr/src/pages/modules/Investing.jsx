@@ -9,6 +9,13 @@ function Investing() {
         document.title = 'Investing | Robinhood'
     })
 
+    const stocks = sessionStorage.getItem('stocks')
+    const crypto = sessionStorage.getItem('crypto')
+    const lists = sessionStorage.getItem('lists')
+
+    console.log(stocks)
+    console.log(crypto)
+
     return (
         <div className='content-container'>
             <div className='main'>
@@ -21,7 +28,7 @@ function Investing() {
                 </div>
             </div>
 
-            <Sidebar />
+            <Sidebar stocks={stocks} crypto={crypto} lists={lists} />
         </div>
     )
 }

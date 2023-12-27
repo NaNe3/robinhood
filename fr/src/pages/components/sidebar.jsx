@@ -3,9 +3,12 @@ import '../modules/Investing.css'
 import '../Robinhood.css'
 
 import Stock from './stock'
+import List from './list'
 
-function Sidebar() {
-    // cookies: id, stocks
+function Sidebar({ stocks, crypto, lists }) {
+    var arrStocks = JSON.parse(stocks)
+    var arrCrypto = JSON.parse(crypto)
+    var arrLists = JSON.parse(lists)
 
     return (
         <div className='sidebar'>
@@ -13,22 +16,36 @@ function Sidebar() {
                 <div className='sidebar-header'>
                     <h2>Cryptocurrencies</h2>
                 </div>
-                <Stock ticker="DOGE" />
-                <Stock ticker="DOGE" />
-                <Stock ticker="DOGE" />
-                <Stock ticker="DOGE" />
+                {
+                    arrCrypto.map((crypto) => {
+                        return (
+                            <Stock ticker={crypto} />
+                        )
+                    })
+                }
                 <div className='sidebar-header'>
                     <h2>Stocks</h2>
                 </div>
-                <Stock ticker="DOGE" />
-                <Stock ticker="DOGE" />
-                <Stock ticker="DOGE" />
+                {
+                    arrStocks.map((stock) => {
+                        return (
+                            <Stock ticker={stock} />
+                        )
+                    })
+                }
                 <div className='sidebar-header'>
                     <h2>Lists</h2>
                 </div>
-                <Stock ticker="DOGE" />
-                <Stock ticker="DOGE" />
-                <Stock ticker="DOGE" />
+                {/* JSON.parse(arrLists[0] */}
+                {
+                    arrLists.map((list) => {
+                        var list = JSON.parse(list)
+                        
+                        return (
+                            <List name={list.name} icon={list.icon} tickers={list.stocks} />
+                        )
+                    })
+                }
             </div>
         </div>   
     )

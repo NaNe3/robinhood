@@ -19,7 +19,7 @@
 
     width: 335px;
     float: right;
-    height: 580px;
+    max-height: 580px;
     overflow-y: auto;
     background-color: white;
     border: 1px solid #e3e9ed;
