@@ -2,13 +2,14 @@
     position: relative;
     display: block;
     margin: 35px 0px;
+    padding: 0;
     width: 1390px;
     height: 1000000px;
 }
 
 .main {
     display: inline-block;
-    width: 1030px;
+    width: 1060px;
     margin: 0px;
     padding: 0px;
 }
@@ -19,9 +20,9 @@
 
     width: 335px;
     float: right;
+    margin-right: -30px;
     max-height: 580px;
     overflow-y: auto;
-    background-color: white;
     border: 1px solid #e3e9ed;
     border-radius: 4px;
 }
@@ -73,3 +74,102 @@
     padding: 0;
 }
 
+.offers-container {
+    margin: 60px 0px 0px 0px;
+    padding: 0px 0px 0px 20px;
+    height: 190px;
+    width: 1040px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+
+.offer {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 1020px;
+    margin-right: 20px;
+    height: 190px;
+    border: 1px solid #e3e9ed;
+    border-radius: 4px;
+}
+
+.offer-image {
+    width: 100px;
+    height: 190px;
+}
+
+.offer-body {
+    display: flex;
+    justify-content: space-between;
+    width: 910px;
+    height: 190px;
+
+}
+
+.offer-content {
+    padding: 24px;
+    width: 850px;
+}
+
+.offer-content p:not(.offer-content-text) {
+    margin: 0;
+    padding: 0;
+
+}
+
+.offer-action {
+    padding: 24px 10px;
+    width: 50px;
+}
+
+.offer-action svg {
+    cursor: pointer;
+}
+
+.offer-action svg:hover {
+    fill: #1dbf73;
+}
+
+.offer-content-header {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6a7278;
+
+}
+
+.offer-content-text {
+    margin: 8px 0px;
+    height: 90px;
+    font-size: 15px;
+    color: black;
+}
+
+.offer-link {
+    font-size: 14px;
+    color: #05c90f;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.offer-link:hover {
+    color: #008000;
+}
+
+.offers-shuffle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px 60px 0px;
+    padding: 0px;
+}
+
+.offers-shuffle div {
+    margin: 0px 10px;
+    font-size: 13px;
+}
+
+.svg-hover:hover {
+    cursor: pointer;
+    fill: #05c90f;
+}
