@@ -1,7 +1,7 @@
 .content-container {
     position: relative;
     display: block;
-    margin: 35px 0px;
+    margin: 35px 0px 0px 0px;
     padding: 0;
     width: 1390px;
 }
@@ -422,4 +422,24 @@
 
 .article-ticker .article-ticker-offset {
     font-size: 14px;
+}
+
+.invest-bottom {
+    border-top: 1px solid #e3e9ed;
+    margin: 0 20px 20px 20px;
+    padding: 20px 0px 0px 0px;
+}
+
+.invest-bottom p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #b8c1c6;
+    font-weight: 500;
+}
+
+.invest-bottom p a {
+    display: inline;
+    font-weight: 700;
+    cursor: pointer;
 }
