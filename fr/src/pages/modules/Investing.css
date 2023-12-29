@@ -4,7 +4,6 @@
     margin: 35px 0px;
     padding: 0;
     width: 1390px;
-    height: 10000px;
 }
 
 .main {
@@ -363,14 +362,11 @@
     background-color: #F5F8FA;
 }
 
+
 .article-container {
     border-top: 1px solid #e3e9ed;
     padding: 20px 0px;
 
-}
-
-.article-container:last-child {
-    border-bottom: 1px solid #e3e9ed;
 }
 
 .article-info-head .company {
