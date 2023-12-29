@@ -1,66 +1,5 @@
 import React from 'react'
 
-import Articles from './articles'
-
-const articles = [
-    {
-        company: "Benzinga",
-        time: "37m",
-        title: "Congressman Buys 1 Share Of NVidia: Smaller Size Than Pelosis But First Stock Buy In Months",
-        ticker: "NVDA",
-        change: "0.31%",
-        image: "https://images.robinhood.com/t-uxJOOq7k4CgDp3_pLAo6QH57M/aHR0cHM6Ly9jZG4uYmVuemluZ2EuY29tL2ZpbGVzL2ltYWdlcy9zdG9yeS8yMDIzL0NhcGl0b2wtTnZpZGlhLVNodXR0ZXJzdG9jay5wbmc_d2lkdGg9MTIwMCZoZWlnaHQ9ODAwJmZpdD1jcm9w"
-    },
-    {
-        company: "Benzinga",
-        time: "37m",
-        title: "Congressman Buys 1 Share Of NVidia: Smaller Size Than Pelosis But First Stock Buy In Months",
-        ticker: "NVDA",
-        change: "0.31%",
-        image: "https://images.robinhood.com/t-uxJOOq7k4CgDp3_pLAo6QH57M/aHR0cHM6Ly9jZG4uYmVuemluZ2EuY29tL2ZpbGVzL2ltYWdlcy9zdG9yeS8yMDIzL0NhcGl0b2wtTnZpZGlhLVNodXR0ZXJzdG9jay5wbmc_d2lkdGg9MTIwMCZoZWlnaHQ9ODAwJmZpdD1jcm9w"
-    },
-    {
-        company: "Benzinga",
-        time: "37m",
-        title: "Congressman Buys 1 Share Of NVidia: Smaller Size Than Pelosis But First Stock Buy In Months",
-        ticker: "NVDA",
-        change: "0.31%",
-        image: "https://images.robinhood.com/t-uxJOOq7k4CgDp3_pLAo6QH57M/aHR0cHM6Ly9jZG4uYmVuemluZ2EuY29tL2ZpbGVzL2ltYWdlcy9zdG9yeS8yMDIzL0NhcGl0b2wtTnZpZGlhLVNodXR0ZXJzdG9jay5wbmc_d2lkdGg9MTIwMCZoZWlnaHQ9ODAwJmZpdD1jcm9w"
-    },
-    {
-        company: "Benzinga",
-        time: "37m",
-        title: "Congressman Buys 1 Share Of NVidia: Smaller Size Than Pelosis But First Stock Buy In Months",
-        ticker: "NVDA",
-        change: "0.31%",
-        image: "https://images.robinhood.com/t-uxJOOq7k4CgDp3_pLAo6QH57M/aHR0cHM6Ly9jZG4uYmVuemluZ2EuY29tL2ZpbGVzL2ltYWdlcy9zdG9yeS8yMDIzL0NhcGl0b2wtTnZpZGlhLVNodXR0ZXJzdG9jay5wbmc_d2lkdGg9MTIwMCZoZWlnaHQ9ODAwJmZpdD1jcm9w"
-    },
-    {
-        company: "Benzinga",
-        time: "37m",
-        title: "Congressman Buys 1 Share Of NVidia: Smaller Size Than Pelosis But First Stock Buy In Months",
-        ticker: "NVDA",
-        change: "0.31%",
-        image: "https://images.robinhood.com/t-uxJOOq7k4CgDp3_pLAo6QH57M/aHR0cHM6Ly9jZG4uYmVuemluZ2EuY29tL2ZpbGVzL2ltYWdlcy9zdG9yeS8yMDIzL0NhcGl0b2wtTnZpZGlhLVNodXR0ZXJzdG9jay5wbmc_d2lkdGg9MTIwMCZoZWlnaHQ9ODAwJmZpdD1jcm9w"
-    },
-    {
-        company: "Benzinga",
-        time: "37m",
-        title: "Congressman Buys 1 Share Of NVidia: Smaller Size Than Pelosis But First Stock Buy In Months",
-        ticker: "NVDA",
-        change: "0.31%",
-        image: "https://images.robinhood.com/t-uxJOOq7k4CgDp3_pLAo6QH57M/aHR0cHM6Ly9jZG4uYmVuemluZ2EuY29tL2ZpbGVzL2ltYWdlcy9zdG9yeS8yMDIzL0NhcGl0b2wtTnZpZGlhLVNodXR0ZXJzdG9jay5wbmc_d2lkdGg9MTIwMCZoZWlnaHQ9ODAwJmZpdD1jcm9w"
-    },
-    {
-        company: "Benzinga",
-        time: "37m",
-        title: "Congressman Buys 1 Share Of NVidia: Smaller Size Than Pelosis But First Stock Buy In Months",
-        ticker: "NVDA",
-        change: "0.31%",
-        image: "https://images.robinhood.com/t-uxJOOq7k4CgDp3_pLAo6QH57M/aHR0cHM6Ly9jZG4uYmVuemluZ2EuY29tL2ZpbGVzL2ltYWdlcy9zdG9yeS8yMDIzL0NhcGl0b2wtTnZpZGlhLVNodXR0ZXJzdG9jay5wbmc_d2lkdGg9MTIwMCZoZWlnaHQ9ODAwJmZpdD1jcm9w"
-    },
-]
-
 function News() {
     return (
         <div className='news-container'>
@@ -82,7 +21,6 @@ function News() {
                 </div>
             </div>
 
-            <Articles />
         </div>
     )
 }

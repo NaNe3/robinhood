@@ -7,6 +7,7 @@ import Offers from '../components/offers'
 import Discover from '../components/discover'
 import Trending from '../components/trending'
 import News from '../components/news'
+import Articles from '../components/articles'
 
 function Investing() {
     useEffect(() => {
@@ -35,6 +36,7 @@ function Investing() {
                 <Discover />
                 <Trending />
                 <News />
+                <Articles />
             </div>
 
             <Sidebar stocks={stocks} crypto={crypto} lists={lists} />

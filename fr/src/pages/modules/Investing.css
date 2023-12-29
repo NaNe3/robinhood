@@ -295,7 +295,7 @@
 }
 
 .news-container {
-    margin: 0px 0px 60px 0px;
+    margin: 0px 0px 25px 0px;
     padding: 0px 0px 0px 20px;
     width: 1030px;
 }
@@ -304,7 +304,7 @@
     background-color: #f5f8fa;
     border: 1px solid #e3e9ed;
     border-radius: 4px;
-    margin-top: 25px;
+    margin: 25px 0px;
     width: 100%;
     padding: 20px;
 }
@@ -351,4 +351,79 @@
 
 .news-box-info .time {
     color: #6a7278;
+}
+
+.article {
+    padding: 0px 20px;
+    width: 1050px;
+    cursor: pointer;
+}
+
+.article:hover {
+    background-color: #F5F8FA;
+}
+
+.article-container {
+    border-top: 1px solid #e3e9ed;
+    padding: 20px 0px;
+
+}
+
+.article-container:last-child {
+    border-bottom: 1px solid #e3e9ed;
+}
+
+.article-info-head .company {
+    font-size: 13px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.article-info-head .time-offset {
+    font-size: 13px;
+}
+
+.article-content-container {
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-content {
+    width: 800px;
+}
+
+.article-image {
+    width: 130px;
+    height: 75px;
+    border: 1px solid #e3e9ed;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.article-image img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.article-title {
+    margin: 5px 0;
+}
+
+.article-ticker {
+    margin: 40px 0 0 0;
+    padding: 0 4px;
+    line-height: 0px;
+}
+
+.article-ticker .article-ticker-text {
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 10px;
+
+}
+
+.article-ticker .article-ticker-offset {
+    font-size: 14px;
 }
