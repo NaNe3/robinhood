@@ -4,6 +4,7 @@
     margin: 35px 0px;
     padding: 0;
     width: 1390px;
+    height: 10000px;
 }
 
 .main {
@@ -291,4 +292,63 @@
 
 .trend p {
     font-size: 14px;
+}
+
+.news-container {
+    margin: 0px 0px 60px 0px;
+    padding: 0px 0px 0px 20px;
+    width: 1030px;
+}
+
+.news-box {
+    background-color: #f5f8fa;
+    border: 1px solid #e3e9ed;
+    border-radius: 4px;
+    margin-top: 25px;
+    width: 100%;
+    padding: 20px;
+}
+
+.markers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e3e9ed;
+}
+
+.markers p {
+    width: 350px;
+    text-align: center;
+    border-right: 1px solid #e3e9ed;
+}
+
+.markers p:last-child {
+    border-right: 0;
+}
+
+.markers p span {
+    margin: 0 5px;
+}
+
+.m-cat {
+    font-weight: 700;
+}
+
+.m-diff {
+    color: #05c90f;
+}
+
+.news-box-info p {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.news-box-info .text-here {
+    font-weight: 700;
+}
+
+.news-box-info .time {
+    color: #6a7278;
 }
