@@ -38,7 +38,7 @@ function List({ name, icon, tickers }) {
                 {
                     tickers.map((ticker) => {
                         return (
-                            <Stock ticker={ticker} />
+                            <Stock type="stock" ticker={ticker} quantity={0}/>
                         )
                     })
                 }

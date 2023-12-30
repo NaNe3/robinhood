@@ -11,7 +11,7 @@ function Stock({ type, ticker, quantity }) {
         <div className='stock' onClick={() => navigate('/' + type + '/' + ticker)}>
             <div className='stock-title'>
                 <h3>{ticker}</h3>
-                <p>{quantity} { type != "crypto" ? "Shares" : "" }</p>
+                <p>{quantity != 0 ? quantity : ""} { type != "crypto" && quantity!=0 ? "Shares" : "" }</p>
             </div>
             <div className='stock-graph'>
                 <img src={`./src/pages/assets/${state}.png`} alt='doge-graph' />

@@ -33,7 +33,7 @@ function Sidebar({ stocks, crypto, lists }) {
                         var stock = JSON.parse(stock)
 
                         return (
-                            <Stock type="stocks" ticker={stock.ticker} quantity={stock.quantity} />
+                            <Stock type="stock" ticker={stock.ticker} quantity={stock.quantity} />
                         )
                     })
                 }
