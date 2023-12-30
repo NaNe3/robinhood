@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../modules/Investing.css'
 import '../Robinhood.css'
 
-function Stock({ ticker }) {
+function Stock({ type, ticker, quantity }) {
     const [state, setState] = useState(Math.random() > 0.5 ? "bull" : "bear")
+    const navigate = useNavigate()
+
     return (
-        <div className='stock'>
+        <div className='stock' onClick={() => navigate('/' + type + '/' + ticker)}>
             <div className='stock-title'>
                 <h3>{ticker}</h3>
-                <p>4,732.48</p>
+                <p>{quantity} { type != "crypto" ? "Shares" : "" }</p>
             </div>
             <div className='stock-graph'>
                 <img src={`./src/pages/assets/${state}.png`} alt='doge-graph' />

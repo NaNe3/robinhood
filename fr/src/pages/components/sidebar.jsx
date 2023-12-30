@@ -18,8 +18,10 @@ function Sidebar({ stocks, crypto, lists }) {
                 </div>
                 {
                     arrCrypto.map((crypto) => {
+                        var crypto = JSON.parse(crypto)
+
                         return (
-                            <Stock ticker={crypto} />
+                            <Stock type="crypto" ticker={crypto.ticker} quantity={crypto.quantity} />
                         )
                     })
                 }
@@ -28,8 +30,10 @@ function Sidebar({ stocks, crypto, lists }) {
                 </div>
                 {
                     arrStocks.map((stock) => {
+                        var stock = JSON.parse(stock)
+
                         return (
-                            <Stock ticker={stock} />
+                            <Stock type="stocks" ticker={stock.ticker} quantity={stock.quantity} />
                         )
                     })
                 }
