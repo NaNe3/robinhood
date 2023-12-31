@@ -24,7 +24,7 @@ function Investing() {
     return (
         <div className='content-container'>
             <div className='main'>
-                <Graph />
+                <Graph type="main" />
                 <div className='info-container'>
                     <div className='buying-power'>
                         <p>Buying power</p>
