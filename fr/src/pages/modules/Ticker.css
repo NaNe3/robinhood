@@ -321,3 +321,27 @@
     color: #6a7278;
     font-weight: 500;
 }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"] {
+    background-color: white;
+    border: 1px solid #e3e9ed;
+    border-radius: 4px;
+    outline: none;
+    color: black;
+    transition: 0.2s;
+    padding: 10px 15px;
+}
+
+input[type="number"]:focus {
+    border: 1px solid #00c805;
+}

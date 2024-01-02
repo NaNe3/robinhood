@@ -8,6 +8,7 @@ import Analyst from '../components/analyst'
 function Ticker() {
     const { ticker } = useParams()
     const [buy, setBuy] = useState(true)
+    const [shares, setShares] = useState()
     const [listed, setListed] = useState(sessionStorage.getItem('lists').includes(ticker) ? true : false)
 
     const handleSelect = (e) => {
@@ -19,6 +20,14 @@ function Ticker() {
             if (buy) {
                 setBuy(false)
             }
+        }
+    }
+
+    const changeShareAmount = (e) => {
+        const newShares = e.target.value
+
+        if (typeof newShares == 'number') {
+            setShares(e.target.value)
         }
     }
 
@@ -206,6 +215,9 @@ function Ticker() {
                     <p>You’re currently not taking advantage of an income opportunity. You could change that today.</p>
                 </div>
             </div>
+
+
+
             <div className='ticker-sidebar'>
                 <div className='ticker-sidebar-container'>
                     <div className='ts-option-row'>
@@ -215,7 +227,7 @@ function Ticker() {
                     <div className='ts-sidebar-content'>
                         <div className='ts-input-row'>
                             <p>Shares</p>
-                            <input type='text' inputMode='numeric' pattern='\d*' placeholder='0'></input>
+                            <input onChange={changeShareAmount} value={shares} type='number' placeholder='0'></input>
                         </div>
                         <div className='ts-info-holder'>
                             <div className='ts-info-row'>
