@@ -10,7 +10,6 @@
     z-index: 1;
     display: inline-block;
     width: 1090px;
-    height: 800px;
     margin: 0px;
     padding: 0px;
 }
@@ -174,4 +173,151 @@
 
 .link-span:hover {
     color: #00b300;
+}
+
+.ticker-body .section-title {
+    width: 1050px;
+}
+
+.section-container {
+    width: 1090px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.section-container p {
+    font-size: 15px;
+}
+
+.redirect {
+    font-weight: 700;
+    color: #00c805;
+    cursor: pointer;
+}
+
+.redirect:hover {
+    color: #00b300;
+}
+
+.information-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.information-col {
+    width: 100%;
+}
+
+.info-col-box { margin-bottom: 15px; }
+.info-col-box:first-child { margin-top: 0px; }
+.info-col-box p { font-size: 13px; margin: 0; padding: 0;}
+.info-col-box p:first-child { font-weight: 700; }
+
+.analyst-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ratings-circle {
+    width: 135px;
+    height: 135px;
+    padding: 35px 0px;
+    border-radius: 150px;
+    background-color: #e6f9e9;
+}
+
+.ratings-circle h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    text-align: center;
+    color: #00c805;
+}
+
+.ratings-circle p {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: #00c805;
+}
+
+.analyst-opinions {
+    width: 885px;
+}
+
+.op-label {
+    width: 40px;
+}
+
+.op-label p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.op-row {
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.op-bar {
+    width: 840px;
+    height: 7px;
+    background-color: #e3e9ed;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.op-bar-fill {
+    height: 7px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: black;
+    box-shadow: 30px 0 40px 30px white;
+}
+
+.op-bar p {
+    margin: -8px 0px 0px 3px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.op-comments {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.op-comment {
+    width: 100%;
+    padding: 25px;
+    background-color: #f5f8fa;
+    border-radius: 4px;
+}
+
+.op-comment p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+.op-comment .quien {
+    font-weight: 800;
+}
+
+.op-comment .op-comment-footer {
+    margin-top: 20px;
+}
+
+.op-comment-footer p {
+    color: #6a7278;
+    font-weight: 500;
 }

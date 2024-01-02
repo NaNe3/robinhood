@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import './Ticker.css'
 
 import Graph from '../components/graph'
+import Analyst from '../components/analyst'
 
 function Ticker() {
     const { ticker } = useParams()
@@ -62,8 +63,148 @@ function Ticker() {
 
                     <a>Enroll in a Stock Lending Program</a>
                 </div>
+                <div className='section-container'>
+                    <p>You’re currently not taking advantage of an income opportunity. You could change that today.</p>
+                </div>
 
 
+
+                <div className='section-title' style={{margin: "0px 20px"}}>
+                    <h2>About</h2>
+                </div>
+                <div className='section-container'>
+                    <p>Maplebear, Inc. engages in the design and development of an online application that offers grocery delivery and pick-up services. The firm offers Instacart which enables users to connect with personal shoppers in the area who pick up and deliver groceries from local stores. <span className='redirect'>Show more</span></p>
+
+                    <div className='information-row'>
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>CEO</p>
+                                <p>Fidji Simo</p>
+                            </div>
+                        </div>
+
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>Employees</p>
+                                <p>3,486</p>
+                            </div>
+                        </div>
+
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>Headquarters</p>
+                                <p>San Francisco, California</p>
+                            </div>
+                        </div>
+
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>Founded</p>
+                                <p>2012</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div className='section-title' style={{margin: "0px 20px"}}>
+                    <h2>Key statistics</h2>
+                </div>
+                <div className='section-container' style={{padding: "0px 20px"}}>
+                    <div className='information-row'>
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>Market Cap</p>
+                                <p>6.57B</p>
+                            </div>
+                            <div className='info-col-box'>
+                                <p>High today</p>
+                                <p>$24.39</p>
+                            </div>
+                            <div className='info-col-box'>
+                                <p>52 Week High</p>
+                                <p>$42.95</p>
+                            </div>
+
+                        </div>
+
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>Price-Earnings ratio</p>
+                                <p>-3.53</p>
+                            </div>
+                            <div className='info-col-box'>
+                                <p>Low today</p>
+                                <p>$23.39</p>
+                            </div>
+                            <div className='info-col-box'>
+                                <p>52 Week low</p>
+                                <p>$23.03</p>
+                            </div>
+
+                        </div>
+
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>Dividend yield</p>
+                                <p>_</p>
+                            </div>
+                            <div className='info-col-box'>
+                                <p>Open price</p>
+                                <p>$23.77</p>
+                            </div>
+                        </div>
+
+                        <div className='information-col'>
+                            <div className='info-col-box'>
+                                <p>Average volume</p>
+                                <p>1.66M</p>
+                            </div>
+                            <div className='info-col-box'>
+                                <p>Volume</p>
+                                <p>1.21M</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div className='section-title' style={{margin: "0px 20px"}}>
+                    <h2>Related lists</h2>
+                </div>
+                <div className='section-container'>
+                    <div className='trend'>
+                        <img src='https://cdn.robinhood.com/app_assets/list_illustrations/china/circle_28/2x.png' />
+                        <p>China</p>
+                    </div>
+                    <div className='trend'>
+                        <img src='https://cdn.robinhood.com/app_assets/list_illustrations/sector_etfs/circle_28/2x.png' />
+                        <p>Bonds & ETFs</p>
+                    </div>
+                </div>
+
+
+
+                <div className='section-title' style={{margin: "0px 20px"}}>
+                    <h2>Analyst ratings</h2>
+                </div>
+                <Analyst />
+
+                <div className='section-title' style={{margin: "0px 20px"}}>
+                    <h2>History</h2>
+                </div>
+                <div className='section-container'>
+                    <p>You currently have not made any transactions with {ticker}</p>
+                </div>
+
+                <div className='section-title' style={{margin: "0px 20px"}}>
+                    <h2>People also own</h2>
+                </div>
+                <div className='section-container'>
+                    <p>You’re currently not taking advantage of an income opportunity. You could change that today.</p>
+                </div>
             </div>
             <div className='ticker-sidebar'>
                 <div className='ticker-sidebar-container'>
