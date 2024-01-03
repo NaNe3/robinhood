@@ -1,0 +1,206 @@
+.deposit-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 70px;
+
+}
+
+
+.deposit-modal {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+}
+
+.exit-button-container {
+    width: 60px;
+    height: 60px;
+    padding: 18px;
+    background-color: white;
+    border-radius: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.exit-button-container:hover {
+    background-color: #F5F8FA;
+}
+
+.deposit-modal-content {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.deposit-modal-content button {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    height: 45px;
+}
+
+.deposit-inputs {
+    margin: 10px 0;
+}
+
+.deposit-input {
+    margin-bottom: 10px;
+}
+
+.deposit-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deposit-label { font-size: 13px; }
+
+.input-container input {
+    text-align: right;
+    width: 300px;
+    padding: 9px 15px;
+
+}
+
+.fake-input-container {
+    border: 1px solid #e3e9ed;
+    border-radius: 4px;
+    padding: 4px 15px;
+    width: 300px;
+    text-align: left;
+    font-size: 13px;
+    cursor: not-allowed;
+}
+
+.fake-input-container:hover {
+    border: 1px solid #cfd7df;
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: right;
+}
+
+.deposit-button {
+    margin: 10px 0 0px 10px;
+    padding: 10px 15px;
+    font-size: 12px;
+    color: black;
+    background-color: white;
+    border: 1px solid #e3e9ed;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.deposit-button:hover {
+    background-color: #F5F8FA;
+}
+
+.ddl {
+    color: #6a7278;
+    font-size: 13px;
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ddl svg {
+    margin-left: 6px;
+    fill: #6a7278;
+}
+
+.dm-initiated {
+    width: 430px;
+    display: block;
+    margin: auto;
+}
+
+.dm-initiated-header {
+    margin: 0px 0px 30px 0px;
+}
+
+.dm-initiated-header h1 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.dm-initiated-header * {
+    margin: 0;
+    padding: 0;
+}
+
+.trans-box {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.dtb-right { width: 400px; }
+.dtb-right .dtb-title {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.dtb-right .dtb-info {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    color: #6a7278;
+}
+
+.dm-initiated-bottom {
+    margin: 25px 0px 0px 0px;
+    font-size: 13px;
+}
+
+.dm-initiated-bottom button {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.dm-2 {
+    width: 100%;
+}
+
+.dm-2 svg { 
+    display: block;
+    margin: 20px auto;
+    height: 190px;
+}
+
+.dm-2 .dm-id {
+    font-size: 21px;
+    font-weight: 600;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.dm-2 .dm-info {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.dm-2 .dm-disclaimer {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 15px 0;
+    padding: 0;
+    color: #6a7278;
+}
+
+.dm-2 button {
+    width: 100%;
+}

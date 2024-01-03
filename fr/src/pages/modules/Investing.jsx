@@ -3,6 +3,8 @@ import './Investing.css'
 
 import Sidebar from '../components/sidebar'
 import Graph from '../components/graph'
+import DepositModal from '../components/deposit-modal'
+
 import Offers from '../components/offers'
 import Discover from '../components/discover'
 import Trending from '../components/trending'
@@ -56,7 +58,7 @@ function Investing() {
                         </div>
                         <div style={{display: "flex", justifyContent: "space-between", gap: "10px", marginTop: "20px"}}>
                             <button id='deposit-btn-1'>Enable margin</button>
-                            <button id='deposit-btn-2'>Deposit funds</button>
+                            <button id='deposit-btn-2' onClick={() => {document.querySelector('.deposit-modal').style.display="block"}}>Deposit funds</button>
                         </div>
                     </div>
 
@@ -76,6 +78,8 @@ function Investing() {
             </div>
 
             <Sidebar stocks={stocks} crypto={crypto} lists={lists} />
+
+            <DepositModal />
         </div>
     )
 }

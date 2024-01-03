@@ -15,6 +15,7 @@ const Schema = Mongoose.Schema({
     name: String,
     email: String,
     password: String,
+    bp: Number,
     crypto: Array,
     stocks: Array,
     lists: Array
@@ -36,6 +37,7 @@ app.post("/signup", (req, res) => {
         name: name,
         email: email,
         password: password,
+        bp: 0,
         crypto: [],
         stocks: [],
         lists: []
@@ -50,6 +52,14 @@ app.post("/signup", (req, res) => {
             }
         })
         .catch(err => res.json(err))
+})
+
+app.put("/transfer", (req, res) => {
+    if (req.type == "deposit") {
+        user.updateOne({email: req.email}, {$inc: {balance: req.amount}})
+            .then(data => res.json(data))
+            .catch(err => res.json(err))
+    }
 })
 
 app.listen(port, () => console.log(`Listening on port ${port}`))
