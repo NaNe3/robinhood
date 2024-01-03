@@ -47,7 +47,8 @@
 
 .buy-deposit-container {
     transition: 0.3s;
-    height: 65px;
+    height: 66px;
+    overflow: hidden;
 }
 
 .toggled {
@@ -60,7 +61,8 @@
     padding: 20px;
     height: 200px;
     float: right;
-    
+    transition: 0.1s;
+    opacity: 0;
 }
 
 .deposit-row {
@@ -469,4 +471,19 @@
     display: inline;
     font-weight: 700;
     cursor: pointer;
+}
+
+#deposit-btn-1 {
+    width: 100%;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+#deposit-btn-1:hover {
+    background-color: #F5F8FA;
+}
+
+#deposit-btn-2 {
+    width: 100%;
 }

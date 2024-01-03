@@ -17,6 +17,7 @@ function Investing() {
     const stocks = sessionStorage.getItem('stocks')
     const crypto = sessionStorage.getItem('crypto')
     const lists = sessionStorage.getItem('lists')
+    const bp = sessionStorage.getItem('bp')
 
     console.log(stocks)
     console.log(crypto)
@@ -24,7 +25,11 @@ function Investing() {
     const toggleDepositBox = (e) => {
         const depositBox = document.querySelector('.buy-deposit-container')
         depositBox.classList.toggle('toggled')
-        // document.getElementById("deposit-box").style.display = (document.getElementById("deposit-box").style.display == "block" ? "none" : "block")
+        document.getElementById("deposit-box").style.opacity = (document.getElementById("deposit-box").style.opacity == 0 ? 1 : 0)
+    }
+
+    const toMoney = (num) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     }
 
     return (
@@ -35,7 +40,7 @@ function Investing() {
                     <div className='info-container' onClick={toggleDepositBox}>
                         <div className='buying-power'>
                             <p>Buying power</p>
-                            <p>$19.01<svg style={{ marginLeft: "10px" }} fill="black" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m1.715 6.285 1.237-1.237L8 10.096l5.048-5.048 1.238 1.237L8 12.571 1.715 6.285Z" fill="var(--rh__text-color)" fill-rule="evenodd"></path></svg></p>
+                            <p>${toMoney(bp)}<svg style={{ marginLeft: "10px" }} fill="black" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m1.715 6.285 1.237-1.237L8 10.096l5.048-5.048 1.238 1.237L8 12.571 1.715 6.285Z" fill="var(--rh__text-color)" fill-rule="evenodd"></path></svg></p>
                         </div>
 
                     </div>
@@ -43,13 +48,18 @@ function Investing() {
                     <div id='deposit-box'>
                         <div className='deposit-row'>
                             <p style={{color: "#6a7278"}}>Brokerage cash</p>
-                            <p>$19.01</p>
+                            <p>${toMoney(bp)}</p>
                         </div>
                         <div className='deposit-row' style={{fontWeight: "600", borderTop: "1px solid #e3e9ed"}}>
                             <p>Total</p>
-                            <p>$19.01</p>
+                            <p>${toMoney(bp)}</p>
+                        </div>
+                        <div style={{display: "flex", justifyContent: "space-between", gap: "10px", marginTop: "20px"}}>
+                            <button id='deposit-btn-1'>Enable margin</button>
+                            <button id='deposit-btn-2'>Deposit funds</button>
                         </div>
                     </div>
+
                 </div>
 
 

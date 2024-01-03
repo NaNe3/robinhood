@@ -46,6 +46,7 @@ function SignUp({ setSignIn, setAuth }) {
                         sessionStorage.setItem('stocks', JSON.stringify([]))
                         sessionStorage.setItem('crypto', JSON.stringify([]))
                         sessionStorage.setItem('lists', JSON.stringify([]))
+                        sessionStorage.setItem('bp', 0)
                         setAuth(true)
                     } else {
                         alert("Error!")
