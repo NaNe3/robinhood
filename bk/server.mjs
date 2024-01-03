@@ -1,10 +1,12 @@
 import Express from 'express'
 import Mongoose from 'mongoose'
+import BodyParser from 'body-parser'
 import Cors from 'cors'
 
 const app = Express()
 const port = 3000
 app.use(Cors())
+app.use(BodyParser.json())
 
 const url =  "mongodb+srv://admin:admin@godfather.gpqepzo.mongodb.net/?retryWrites=true&w=majority"
 Mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
@@ -55,11 +57,25 @@ app.post("/signup", (req, res) => {
 })
 
 app.put("/transfer", (req, res) => {
-    if (req.type == "deposit") {
-        user.updateOne({email: req.email}, {$inc: {balance: req.amount}})
-            .then(data => res.json(data))
+    const { id, amount, type } = req.body
+
+    const objId = new Mongoose.Types.ObjectId(id)
+    console.log(req.body)
+    if (type == "deposit") {
+        user.updateOne({_id: objId}, {$inc: {bp: amount}})
+            .then(data => {
+                
+                // if (data._id) {
+                //     res.json(data)
+                // } else {
+                //     res.status(500).json({ error: "Error depositing" })
+                // }
+
+                res.json(data)
+            })
             .catch(err => res.json(err))
     }
+
 })
 
 app.listen(port, () => console.log(`Listening on port ${port}`))

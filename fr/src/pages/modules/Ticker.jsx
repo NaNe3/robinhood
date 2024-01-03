@@ -11,6 +11,10 @@ function Ticker() {
     const [shares, setShares] = useState()
     const [listed, setListed] = useState(sessionStorage.getItem('lists').includes(ticker) ? true : false)
 
+    const toMoney = (num) => {
+        return (num > 0 ? "$": "") + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
+
     const handleSelect = (e) => {
         if (e.target.innerHTML.includes('Buy')) {
             if (!buy) {
@@ -238,7 +242,7 @@ function Ticker() {
                             </div>
                         </div>
                         <button className='action-button'>Review Order</button>
-                        <div className='ts-buy-power'>{ buy ? "$19.01 buying power available" : <p style={{margin: "0px"}}>0.202892 Shares Available - <span className='link-span'>Sell All</span></p>}</div>
+                        <div className='ts-buy-power'>{ buy ? toMoney(sessionStorage.getItem("bp")) + " buying power available" : <p style={{margin: "0px"}}>0.202892 Shares Available - <span className='link-span'>Sell All</span></p>}</div>
                     </div>
                 </div>
 

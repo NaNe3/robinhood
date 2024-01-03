@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './deposit-modal.css'
 
-function DepositModal() {
+function DepositModal({ setBp }) {
     const [amount, setAmount] = React.useState("")
     const toMoney = (num) => {
         return (amount > 0 ? "$": "") + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -20,30 +20,52 @@ function DepositModal() {
     }
 
     const reviewTransfer = () => {
-        document.getElementById("dm-rt-button").disabled = true
+        // document.getElementById("dm-rt-button").disabled = true
+        console.log(sessionStorage)
         fetch('http://localhost:3000/transfer', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                user: sessionStorage.getItem("user"),
+                id: sessionStorage.getItem("id"),
                 amount: amount,
                 type: "deposit"
+            }),
+            cache: 'no-cache',
+            cors: 'no-cors'
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    setBp(prev => parseInt(prev) + parseInt(amount))
+                    sessionStorage.setItem("bp", parseInt(sessionStorage.getItem("bp")) + parseInt(amount))
+                    setAmount("")
+
+                    document.querySelector('.dm-transaction').style.display = "none"
+                    document.querySelector('.dm-initiated').style.display = "block"
+                    document.querySelector('.dm-1').style.display = "block"
+                    document.querySelector('.dm-2').style.display = "none"
+                } else {
+                    console.error(data)
+                }
             })
-        })
-        .then(response => {
-            if (response == "success") {
-                document.querySelector('.dm-transaction').style.display = "none"
-                document.querySelector('.dm-initiated').style.display = "block"
-                document.querySelector('.dm-1').style.display = "block"
-                document.querySelector('.dm-2').style.display = "none"
-            } else {
-                console.error(response)
-            }
-        })
-        .catch(error => console.error(error))
+            .catch(error => console.error(error))
     }
+
+    const dm1 = () => {
+        document.querySelector('.dm-1').style.display = "none"
+        document.querySelector('.dm-2').style.display = "block"
+    }
+
+    const dm2 = () => {
+        document.querySelector('.deposit-modal').style.display = "none"
+        document.querySelector('.dm-transaction').style.display = "block"
+        document.querySelector('.dm-initiated').style.display = "none"
+        document.querySelector('.dm-1').style.display = "none"
+        document.querySelector('.dm-2').style.display = "none"
+    }
+
 
     const date = new Date();
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -137,7 +159,7 @@ function DepositModal() {
 
                         <div className='dm-initiated-bottom'>
                             <p>Please make sure to maintain a balance of {toMoney(amount)} in your bank account until the funds are deducted to avoid any issues.</p>
-                            <button>Continue</button>
+                            <button onClick={dm1}>Continue</button>
                         </div>
                     </div>
 
@@ -147,7 +169,7 @@ function DepositModal() {
                         <p className='dm-id'>Instant Deposit available</p>
                         <p className='dm-info'>While your money is on its way, you've got access to up to <strong>{toMoney(amount)}</strong> of investible funds to use on Robinhood.</p>
                         <p className='dm-disclaimer'>Instant Deposits are determined by your account value, deposit history, and Robinhood Gold status. Instant Deposits are subject to restrictions, which may change due to market conditions. Learn more</p>
-                        <button>Continue</button>
+                        <button onClick={dm2}>Continue</button>
                     </div>
 
                 </div>

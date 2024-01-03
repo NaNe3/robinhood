@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Investing.css'
 
 import Sidebar from '../components/sidebar'
@@ -16,10 +16,10 @@ function Investing() {
         document.title = 'Investing | Robinhood'
     })
 
-    const stocks = sessionStorage.getItem('stocks')
-    const crypto = sessionStorage.getItem('crypto')
-    const lists = sessionStorage.getItem('lists')
-    const bp = sessionStorage.getItem('bp')
+    const [stocks, setStocks] = useState(sessionStorage.getItem('stocks'))
+    const [crypto, setCrypto] = useState(sessionStorage.getItem('crypto'))
+    const [lists, setLists] = useState(sessionStorage.getItem('lists'))
+    const [bp, setBp] = useState(sessionStorage.getItem('bp'))
 
     console.log(stocks)
     console.log(crypto)
@@ -79,7 +79,7 @@ function Investing() {
 
             <Sidebar stocks={stocks} crypto={crypto} lists={lists} />
 
-            <DepositModal />
+            <DepositModal setBp={setBp} />
         </div>
     )
 }
