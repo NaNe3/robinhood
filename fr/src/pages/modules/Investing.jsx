@@ -54,7 +54,11 @@ function Investing() {
                         </div>
                         <div className='deposit-row' style={{fontWeight: "600", borderTop: "1px solid #e3e9ed"}}>
                             <p>Total</p>
-                            <p>$19.01</p>
+                            <p>${toMoney(bp)}</p>
+                        </div>
+                        <div style={{display: "flex", justifyContent: "space-between", gap: "10px", marginTop: "20px"}}>
+                            <button id='deposit-btn-1'>Enable margin</button>
+                            <button id='deposit-btn-2' onClick={() => {document.querySelector('.deposit-modal').style.display="block"}}>Deposit funds</button>
                         </div>
                     </div>
 
