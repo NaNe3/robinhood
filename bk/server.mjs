@@ -8,18 +8,15 @@ const port = 3000
 app.use(Cors())
 app.use(BodyParser.json())
 
+
+
+
+
 function dailyUpdate() {
     console.log("=")
     console.log("Daily Update Triggered")
     console.log("-----------------------")
-    
-    let tickerSchema = Mongoose.Schema({
-        ticker: String,
-        name: String,
-        prices: [Number]
-    })
 
-    let ticker = Mongoose.model("ticker", tickerSchema)
     ticker.find()
         .then(tickers => {
             tickers.forEach(tick => {
@@ -28,16 +25,30 @@ function dailyUpdate() {
                 //     Number((newest * (Math.random() * 0.2 + 0.9)).toFixed(5)) :
                 //     Number((newest * (Math.random() * 0.2 + 0.9)).toFixed(2))
                 // ))
-                // ticker.updateOne({ _id: tick._id }, { prices: ticker.prices })
+                // ticker.updateOne({ ticker: tick.ticker }, { prices: tick.prices })
                 //     .catch((err) => console.log(err));
 
                 // UNCOMMENT THIS WHEN YOU ARE READY TO BUILD APP
 
-                console.log("------------ SIMULAITNG ACTUAL TICKER UPDATE -----------")
             })
+            console.log("------------ SIMULAITNG ACTUAL TICKER UPDATE -----------")
         })
         .catch(err => console.log(err))
 }
+
+const tickerSchema = Mongoose.Schema({
+    ticker: String,
+    name: String,
+    prices: [Number]
+})
+
+const ticker = Mongoose.model("ticker", tickerSchema)
+
+
+
+
+
+
 
 const url =  "mongodb+srv://admin:admin@godfather.gpqepzo.mongodb.net/?retryWrites=true&w=majority"
 Mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
@@ -96,6 +107,10 @@ app.get("/login", (req, res) => {
         .catch(err => res.json(err))
 })
 
+
+
+
+
 app.post("/signup", (req, res) => {
     const {name, email, password} = req.query
 
@@ -119,6 +134,18 @@ app.post("/signup", (req, res) => {
         })
         .catch(err => res.json(err))
 })
+
+app.post("/stocks/sidebar", (req, res) => {
+    const tickersQuery = req.body.tickers
+
+    ticker.find({ticker: {$in: tickersQuery}})
+        .then(data => res.json(data))
+        .catch(err => res.json(err))
+})
+
+
+
+
 
 app.put("/transfer", (req, res) => {
     const { id, amount, type } = req.body
